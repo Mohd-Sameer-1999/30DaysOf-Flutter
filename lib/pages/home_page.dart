@@ -8,7 +8,6 @@ class HomePage extends StatelessWidget {
     int days = 30;
     String name = "codepur";
 
-
     return Scaffold(
       appBar: AppBar(
         title: Text("Catalog app"),

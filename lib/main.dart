@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sample_flutter_app/home_page.dart';
+import 'package:sample_flutter_app/pages/home_page.dart';
+import 'package:sample_flutter_app/pages/login_page.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -10,9 +11,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
-      home: HomePage()
+      themeMode: ThemeMode.light,
+      darkTheme: ThemeData(
+        brightness: Brightness.dark
+      ),
+      routes: {
+        "/" : (context) => LoginPage(),
+        "/home" : (context) => HomePage()
+        
+      },
     );
   }
+
+  // bringVegetables({required bool vegetableBag, int rupees = 100}) {}
 }
